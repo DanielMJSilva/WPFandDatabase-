@@ -1,0 +1,70 @@
+﻿<Window x:Class="_301203886_MachadoJustoDaSilva__LAB04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_301203886_MachadoJustoDaSilva__LAB04"
+ mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1*"/>
+		</Grid.ColumnDefinitions>
+		<DataGrid Grid.Row="0" Grid.Column="0" Name="DataGrid1" Background="LightGray" RowBackground="LightGray" AutoGenerateColumns="True" IsReadOnly="True">
+		</DataGrid>
+		<DataGrid Grid.Row="0" Grid.Column="1" Name="DataGrid2" Background="LightCyan" RowBackground="LightCyan" AutoGenerateColumns="True" IsReadOnly="True"/>
+		<DataGrid Grid.Row="0" Grid.Column="2" Name="DataGrid3" Background="LightSteelBlue" RowBackground="LightSteelBlue" AutoGenerateColumns="True" IsReadOnly="True">
+		</DataGrid>
+		<Grid Grid.Row="1" Grid.Column="0" Margin="12 8 12 8">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+			</Grid.RowDefinitions>
+			<Label Grid.Row="0" Content="Fruit"></Label>
+			<ComboBox Grid.Row="1" Name="fruitComboBox" IsEditable="True" IsReadOnly="True" Text="Pick a fruit" SelectionChanged="call_ComboBox_fruitPicked">
+			</ComboBox>
+			<Label Grid.Row="2" Content="Planet"></Label>
+			<ComboBox Grid.Row="3" Name="planetComboBox" IsEditable="True" IsReadOnly="True" Text="Pick a planet" SelectionChanged="call_ComboBox_planetPicked">
+			</ComboBox>
+		</Grid>
+		<Grid Grid.Row="2" Grid.Column="1" Background="LightSteelBlue">
+		</Grid>
+		<Grid Grid.Row="2" Grid.Column="0" Margin="0 0 -30 0" Background="LightSteelBlue">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+			</Grid.RowDefinitions>
+			<Button Grid.Row="0" Margin="100 5 0 5" Background="LightGray" Content="Clear" Click="call_Clear">
+			</Button>
+			<Button Grid.Row="1" Margin="100 5 0 5" Background="LightGray" Content="Delete selected rows" Click="call_Delete_Selected">
+			</Button>
+		</Grid>
+		<Grid Grid.Row="2" Grid.Column="2" Background="LightSteelBlue" Margin="-30 0 0 0" >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+				<RowDefinition Height="1*"/>
+			</Grid.RowDefinitions>
+			<Button Grid.Row="0" Margin="0 5 100 5" Background="LightGray" Content="LINQ Project QS" Click="call_LINQ_Project_QS_Button_Click">
+			</Button>
+			<Button Grid.Row="1" Margin="0 5 100 5" Background="LightGray" Content="LINQ Filter QS" Click="call_LINQ_Filter_Click">
+			</Button>
+			<Button Grid.Row="2" Margin="0 5 100 5" Background="LightGray" Content="LINQ Order Ascending QS" Click="call_LINQ_Order_Asc_Click">
+			</Button>
+			<Button Grid.Row="3" Margin="0 5 100 5" Background="LightGray" Content="LINQ Inner Join QS" Click="call_LINQ_Inner_Join_Click">
+			</Button>
+		</Grid>
+	</Grid>
+</Window>
